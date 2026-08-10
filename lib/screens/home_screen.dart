@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/greeting_section.dart';
+import '../widgets/student_id_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,9 @@ class HomeScreen extends StatelessWidget {
       body: const Padding(
         padding: EdgeInsets.all(20),
 
-        child: GreetingSection(),
+        child: Column(
+          children: [GreetingSection(), SizedBox(height: 25), StudentIdCard()],
+        ),
       ),
     );
   }
