@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/greeting_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,11 +12,10 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: const Center(
-        child: Text(
-          "Welcome to Student Management System",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+      body: const Padding(
+        padding: EdgeInsets.all(20),
+
+        child: GreetingSection(),
       ),
     );
   }
