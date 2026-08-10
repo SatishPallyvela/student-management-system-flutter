@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/greeting_section.dart';
 import '../widgets/student_id_card.dart';
+import '../widgets/quick_actions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -13,11 +14,19 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
       ),
 
-      body: const Padding(
+      body: const SingleChildScrollView(
         padding: EdgeInsets.all(20),
 
         child: Column(
-          children: [GreetingSection(), SizedBox(height: 25), StudentIdCard()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            GreetingSection(),
+            SizedBox(height: 25),
+            StudentIdCard(),
+            SizedBox(height: 25),
+
+            QuickActions(),
+          ],
         ),
       ),
     );
